@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:CircleIndicator="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <com.coffe.shentao.viewpagecircle_indication.SimpleIndicator
+        android:id="@+id/id_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#44dddddd"
+        app:indicator_color="@android:color/holo_blue_bright"
+        app:item_count="4"
+        app:line_color="#dddddd"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/id_indicator"
+        android:layout_gravity="center"></android.support.v4.view.ViewPager>
+
+    <com.coffe.shentao.viewpagecircle_indication.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        CircleIndicator:ci_background="@android:color/white"
+        CircleIndicator:ci_gravity="center"
+        CircleIndicator:ci_margin="5dp"
+        CircleIndicator:ci_mode="outside"
+        CircleIndicator:ci_radius="10dp"
+        CircleIndicator:ci_selected_background="0xffe6454a"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>
